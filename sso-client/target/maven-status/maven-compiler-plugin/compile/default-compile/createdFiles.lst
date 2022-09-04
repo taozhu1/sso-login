@@ -1,0 +1,3 @@
+com/tao/ssoclient/SsoClientApplication.class
+com/tao/ssoclient/config/MVCConfig.class
+com/tao/ssoclient/filter/UserFilter.class
