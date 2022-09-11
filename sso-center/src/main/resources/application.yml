@@ -6,7 +6,7 @@ server:
 
 spring:
   redis:
-    host: 192.168.70.129
+    host: localhost
     password: root
     port: 6379
     database: 0

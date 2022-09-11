@@ -3,56 +3,89 @@ package com.tao.common.uitl;
 import io.jsonwebtoken.*;
 import org.springframework.util.StringUtils;
 
-import java.util.Date;
-
 public class JwtHelper {
     // 过期时间设置30分钟
-    private static long tokenExpiration = System.currentTimeMillis() + 30 * 60 * 1000;
-    private static String tokenSignKey = "11111111111";
+    private static long jwtExpiration = System.currentTimeMillis() + 30 * 60 * 1000L;
+    private static String jwtSignKey = "taozhu1@qq.com";
 
-    public static String createToken(Integer userId, String userName, String password) {
-        // tokenSignKey = MD5Util.encrypt(password);
-        String token = Jwts.builder()
-                .setSubject("SSO-AUTH")
-                .setExpiration(new Date(tokenExpiration))
+    /**
+     * 生成JWT
+     *
+     * @param userId
+     * @param userName
+     * @param role
+     * @return
+     */
+    public static String createToken(Integer userId, String userName, String role) {
+        JwtBuilder jwtBuilder = Jwts.builder()
+                .setSubject("USER-AUTH")
                 .claim("userId", userId)
                 .claim("userName", userName)
-                .signWith(SignatureAlgorithm.HS512, tokenSignKey) // 使用用户密码作为sign，修改密码后签名失效
-                .compressWith(CompressionCodecs.GZIP)
-                .compact();
-        return token;
+                .claim("role", role)
+                .signWith(SignatureAlgorithm.HS512, jwtSignKey) // 使用用户密码作为sign，修改密码后签名失效
+                .compressWith(CompressionCodecs.GZIP);
+//                .setExpiration(new Date(jwtExpiration));
+        return jwtBuilder.compact();
     }
 
-    public static Integer getUserId(String token) {
+
+
+    /**
+     * 检查token是否有效
+     *
+     * @param token
+     * @return
+     */
+    public static Boolean checkJwt(String token) {
         if (StringUtils.isEmpty(token)) {
-            return null;
+            return false;
         }
-        Jws<Claims> claimsJws = null;
+
         try {
-            claimsJws = Jwts.parser().setSigningKey(tokenSignKey).parseClaimsJws(token);
+            Jwts.parser().setSigningKey(jwtSignKey).parseClaimsJws(token);
         } catch (Exception e) {
             // throw new RuntimeException("JWT解析异常！");
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * 解密jWT获取用户id
+     *
+     * @param token
+     * @return
+     */
+    public static Claims decryptJwt(String token) {
+        if (StringUtils.isEmpty(token)) {
             return null;
         }
-        Claims claims = claimsJws.getBody();
-        Integer userId = (Integer) claims.get("userId");
-        return userId.intValue();
+        Jws<Claims> claimsJws;
+        try {
+            claimsJws = Jwts.parser().setSigningKey(jwtSignKey).parseClaimsJws(token);
+        } catch (Exception e) {
+            return null;
+        }
+        // System.out.println(claimsJws);
+        return claimsJws.getBody();
     }
 
-    public static String getUserName(String token) {
-        if (StringUtils.isEmpty(token)) {
-            return "";
-        }
-        Jws<Claims> claimsJws
-                = Jwts.parser().setSigningKey(tokenSignKey).parseClaimsJws(token);
-        Claims claims = claimsJws.getBody();
-        return (String) claims.get("userName");
+    public static String parseToken(String token, String key) {
+        Claims claims = decryptJwt(token);
+        return String.valueOf(claims.get(key));
     }
+
 
     public static void main(String[] args) {
-        String token = createToken(1, "zt", "1111");
-        System.out.println(getUserId(token));
-        System.out.println(getUserName(token));
+        String token = createToken(1, "taozhu", "admin");
+        System.out.println(token);
+        System.out.println(checkJwt(token));
+        System.out.println(decryptJwt(token));
+//        long exp = Long.valueOf(String.valueOf(parseToken(token, "exp"))) * 1000L;
+//        System.out.println(exp);
+//        System.out.println(new Date());
+//        System.out.println(new Date(exp));
+//        System.out.println(new Date(jwtExpiration));
     }
 }
 

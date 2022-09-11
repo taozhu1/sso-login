@@ -12,10 +12,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="cloud-sso" target="1.8" />
       <module name="common" target="1.8" />
       <module name="sso-center" target="1.8" />
       <module name="sso-client" target="1.8" />
+      <module name="sso-login" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

@@ -7,7 +7,9 @@ import lombok.Data;
  */
 @Data
 public class LoginVo {
+    // 用户ID
     private int userId;
-    // 回调地址
-    private String returnUrl;
+    private String password;
+    // 回调地址。授权后回到相应的客户端页面
+    // private String returnUrl;
 }
