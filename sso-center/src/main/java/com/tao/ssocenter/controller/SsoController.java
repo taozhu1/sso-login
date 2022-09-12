@@ -138,7 +138,7 @@ public class SsoController {
     }
 
     /**
-     * 刷新jwt
+     * 刷新jwt -> 放到了checkJWT里
      *
      * @param token
      * @return
@@ -147,7 +147,7 @@ public class SsoController {
     @ResponseBody
     public Result refreshJwt(@RequestParam(name = "token") String token) {
         String redisKey = RedisKeyUtil.getToken(token);
-        redisTemplate.opsForValue().set(redisKey, token, 2, TimeUnit.HOURS);
+        redisTemplate.opsForValue().set(redisKey, token, 30, TimeUnit.MINUTES);
         log.info("refresh token {}", token);
         return Result.ok(token);
     }
@@ -179,12 +179,10 @@ public class SsoController {
     @GetMapping("/decrypt")
     public Object jwtDecrypt(@RequestParam("token") String token,
                              @RequestParam("sign") String sign) {
-        // TODO 签名校验
-
         if (StringUtils.isEmpty(token) || StringUtils.isEmpty(sign)) {
             return null;
         }
-
+        // TODO 签名校验
         return JwtHelper.decryptJwt(token);
     }
 
