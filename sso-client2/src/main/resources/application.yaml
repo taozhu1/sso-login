@@ -1,10 +1,12 @@
 server:
-  port: 3001
+  port: 9002
   servlet:
-    context-path: /center
+    context-path: /user
 
 
 spring:
+  application:
+    name: sso-client-2
   redis:
     host: 192.168.70.128
     password: root

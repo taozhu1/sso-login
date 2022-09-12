@@ -1,10 +1,11 @@
 # 目录结构
 
-|            |             |
-| ---------- | ----------- |
-| common     | 通用模块    |
-| sso-center | SSO授权中心 |
-| sso-client | 客户端      |
+|             |         |
+|-------------|---------|
+| common      | 通用模块    |
+| sso-center  | SSO授权中心 |
+| sso-client  | 客户端 1   |
+| sso-client2 | 客户端 2   |
 
 # 认证流程
 
@@ -54,7 +55,8 @@ JWT的payload使用的是base64编码的，因此在JWT中不能存储敏感数�
 
 JWT有很多缺点，但是在分布式环境下不需要像session一样额外实现多机数据共享，虽然seesion的多机数据共享可以通过粘性session、session共享、session复制、持久化session、terracoa实现seesion复制等多种成熟的方案来解决这个问题。但是JWT不需要额外的工作，使用JWT不香吗？且JWT一次性的缺点可以结合redis进行弥补。
 
-# 主流方案
+# 续签的主流方案
+Cookie ＋ JWT 的方式很好的体现了无状态的特点，但由于这种方案下发的 token 是无法管控的，所以在实际应用中一般还是会配合 Redis 使用。
 
 * 方案1：每次请求都返回新的Token，这种简单粗暴，不存在续签的问题，不过相信很多人不会用，请求量大的话性能损耗也是比较明显。
 * 方案2：JWT 有效期设置到半夜。
@@ -66,7 +68,7 @@ JWT有很多缺点，但是在分布式环境下不需要像session一样额外�
 
 - 生成的token中不带有过期时间，token的过期时间由redis进行管理。
 - JWT 中不带有敏感信息，如 password 字段不会出现在 token 中。
-- 临近过期刷新 Redis Key 的时间。
+- 内存标识记录用户token的过期时间，避免反复查询 redis。临近过期时才去 Redis 刷新过期时间。
 
 # 参考
 

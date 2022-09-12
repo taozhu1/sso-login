@@ -1,10 +1,10 @@
-package com.tao.ssocenter;
+package com.tao.ssoclient;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SsoCenterApplicationTests {
+class SsoClientApplication9001Tests {
 
     @Test
     void contextLoads() {

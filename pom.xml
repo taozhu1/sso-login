@@ -12,16 +12,17 @@
     </parent>
 
     <modules>
+        <module>common</module>
         <module>sso-center</module>
         <module>sso-client</module>
-        <module>common</module>
+        <module>sso-client2</module>
     </modules>
 
     <groupId>com.tao</groupId>
-    <artifactId>cloud-sso</artifactId>
+    <artifactId>sso-login</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>cloud-sso</name>
-    <description>cloud-sso</description>
+    <name>sso-login</name>
+    <description>sso-login</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -49,13 +50,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!--jwt-->
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-            <version>0.9.1</version>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -77,17 +71,6 @@
                 </configuration>
             </plugin>
         </plugins>
-<!--        <resources>-->
-<!--            <resource>-->
-<!--                <directory>src/main/resources</directory>-->
-<!--                <includes>-->
-<!--                    <include>**/*.xml</include>-->
-<!--                    <include>**/*.properties</include>-->
-<!--                    <include>**/*.yml</include>-->
-<!--                </includes>-->
-<!--                <filtering>true</filtering>-->
-<!--            </resource>-->
-<!--        </resources>-->
     </build>
 
 </project>

@@ -3,6 +3,8 @@ package com.tao.common.uitl;
 import io.jsonwebtoken.*;
 import org.springframework.util.StringUtils;
 
+import java.util.Date;
+
 public class JwtHelper {
     // 过期时间设置30分钟
     private static long jwtExpiration = System.currentTimeMillis() + 30 * 60 * 1000L;
@@ -85,7 +87,7 @@ public class JwtHelper {
 //        System.out.println(exp);
 //        System.out.println(new Date());
 //        System.out.println(new Date(exp));
-//        System.out.println(new Date(jwtExpiration));
+        System.out.println(new Date(jwtExpiration));
     }
 }
 
