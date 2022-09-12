@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8aca155-a9a5-4337-8cb3-1affe1c3ba18" name="Changes" comment="redis manage jwt">
-      <change afterPath="$PROJECT_DIR$/imgs/jwt1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tao/common/uitl/JwtHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tao/common/uitl/JwtHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sso-center/src/main/java/com/tao/ssocenter/controller/SsoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sso-center/src/main/java/com/tao/ssocenter/controller/SsoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sso-client/src/main/java/com/tao/ssoclient/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sso-client/src/main/java/com/tao/ssoclient/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sso-client2/src/main/java/com/tao/ssoclient/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sso-client2/src/main/java/com/tao/ssoclient/controller/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +156,7 @@
       <option name="presentableId" value="Default" />
       <updated>1662967191064</updated>
       <workItem from="1662967194654" duration="645000" />
-      <workItem from="1662967842458" duration="9510000" />
+      <workItem from="1662967842458" duration="9927000" />
     </task>
     <task id="LOCAL-00001" summary="redis manage jwt">
       <created>1662981626711</created>

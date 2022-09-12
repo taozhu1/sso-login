@@ -170,6 +170,24 @@ public class SsoController {
         return Result.ok("注销成功:" + token);
     }
 
+    /**
+     * 解密jwt
+     *
+     * @param token
+     * @return
+     */
+    @GetMapping("/decrypt")
+    public Object jwtDecrypt(@RequestParam("token") String token,
+                             @RequestParam("sign") String sign) {
+        // TODO 签名校验
+
+        if (StringUtils.isEmpty(token) || StringUtils.isEmpty(sign)) {
+            return null;
+        }
+
+        return JwtHelper.decryptJwt(token);
+    }
+
 
     @GetMapping("/")
     public ModelAndView index(ModelAndView mv) {
