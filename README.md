@@ -68,7 +68,16 @@ Cookie ＋ JWT 的方式很好的体现了无状态的特点，但由于这种�
 
 - 生成的token中不带有过期时间，token的过期时间由redis进行管理。
 - JWT 中不带有敏感信息，如 password 字段不会出现在 token 中。
-- 内存标识记录用户token的过期时间，避免反复查询 redis。临近过期时才去 Redis 刷新过期时间。
+- 内存标识记录用户token的过期时间，避免反复查询 redis。临近过期时才去 Redis 刷新过期时间。 
+
+当用户登录之后，后续每个请求都将包含 JWT，一般将 JWT 信息在请求头部携带。单点登录是现在广泛使用的JWT的一个特性，因为它的开销很小，并且可以轻松地跨域使用。
+![img.png](imgs/jwt1.png)
+
+# JWT中token在前端的所有操作
+- 获取token
+- 将token放到cookie
+- 每次发送请求将token存入header
+- 解密token，获取用户名等信息存到cookie
 
 # 参考
 
@@ -81,3 +90,4 @@ Cookie ＋ JWT 的方式很好的体现了无状态的特点，但由于这种�
 - http://www.javashuo.com/article/p-eddilrqz-y.html
 - https://www.cnblogs.com/protected/p/7399159.html
 - https://blog.csdn.net/zhang_java_11/article/details/107690042
+- https://blog.csdn.net/qq_53126706/article/details/120925322

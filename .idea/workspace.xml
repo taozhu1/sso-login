@@ -4,59 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb5204d-9af2-47f1-8e3b-ca611bbd76dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_6_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_15_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_15_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/tao/common/domain/Token.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/tao/common/uitl/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/tao/common/uitl/ResultCodeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/target/classes/com/tao/common/config/RedisConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/target/classes/com/tao/common/domain/Token.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/target/classes/com/tao/common/domain/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/target/classes/com/tao/common/uitl/CookieUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/target/classes/com/tao/common/uitl/JwtHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/target/classes/com/tao/common/uitl/MD5Util.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/target/classes/com/tao/common/uitl/RedisKeyUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/target/classes/com/tao/common/uitl/Result.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/target/classes/com/tao/common/uitl/ResultCodeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/target/classes/com/tao/common/vo/LoginVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sso-center/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sso-center/target/classes/com/tao/ssocenter/SsoCenterApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sso-center/target/classes/com/tao/ssocenter/controller/SsoController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sso-center/target/classes/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sso-center/target/test-classes/com/tao/ssocenter/SsoCenterApplicationTests.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sso-client/target/classes/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sso-client/target/classes/com/tao/ssoclient/SsoClientApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sso-client/target/classes/com/tao/ssoclient/config/MVCConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sso-client/target/classes/com/tao/ssoclient/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sso-client/target/classes/com/tao/ssoclient/filter/UserTokenInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sso-client/target/test-classes/com/tao/ssoclient/SsoClientApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="d8aca155-a9a5-4337-8cb3-1affe1c3ba18" name="Changes" comment="redis manage jwt">
+      <change afterPath="$PROJECT_DIR$/imgs/jwt1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-sso.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sso-login.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tao/common/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tao/common/domain/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tao/common/uitl/JwtHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tao/common/uitl/JwtHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tao/common/vo/LoginVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tao/common/vo/LoginVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sso-center/src/main/java/com/tao/ssocenter/controller/SsoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sso-center/src/main/java/com/tao/ssocenter/controller/SsoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-center/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sso-center/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-center/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-center/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-center/sso-center.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sso-center/sso-center.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-client/src/main/java/com/tao/ssoclient/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sso-client/src/main/java/com/tao/ssoclient/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-client/src/main/java/com/tao/ssoclient/filter/UserTokenInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/sso-client/src/main/java/com/tao/ssoclient/filter/UserTokenInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-client/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/sso-client/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-client/sso-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sso-client/sso-client.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,8 +21,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
-        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -87,14 +37,12 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../Tools/apache-maven-3.8.6" />
-        <option name="userSettingsFile" value="C:\Tools\apache-maven-3.8.6\conf\settings.xml" />
+        <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="26F10RJZWoMbnBFOTyrdmJqYGEU" />
+  <component name="ProjectId" id="2Ees3zQdjlSTTvFSGxWAsYPeZuS" />
   <component name="ProjectViewState">
-    <option name="autoscrollToSource" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
@@ -105,12 +53,15 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/tao/Desktop/sso-login",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "C:/Projects/IdeaProjects/seckill-project",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "f7afc7af3b761f8cd44ef7ada9632665"
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "1850a9e4693bd3f0d560200ce78485ef"
   }
 }]]></component>
   <component name="ReactorSettings">
@@ -121,12 +72,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/sso-center/src/main/resources" />
-      <recent name="$PROJECT_DIR$/sso-center/target/classes" />
+      <recent name="C:\Projects\IdeaProjects\sso-login\sso-client2\src\main\resources" />
+      <recent name="C:\Projects\IdeaProjects\sso-login\sso-client2\src\main\java" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.tao.ssoclient.controller" />
-      <recent name="com.tao.common.uitl" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projects\IdeaProjects\sso-login\imgs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -136,7 +86,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SsoClientApplication">
+  <component name="RunManager" selected="Spring Boot.SsoClientApplication9001">
     <configuration name="JwtHelper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.tao.common.uitl.JwtHelper" />
       <module name="common" />
@@ -150,22 +100,50 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SsoCenterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="SSOCenterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
       <module name="sso-center" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tao.ssocenter.SsoCenterApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tao.ssocenter.SSOCenterApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SsoClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="SsoClientApplication9001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="sso-client" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tao.ssoclient.SsoClientApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tao.ssoclient.SsoClientApplication9001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tao.ssoclient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SsoClientApplication9002" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="sso-client2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tao.ssoclient.SsoClientApplication9002" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tao.ssoclient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.JwtHelper" />
+      <item itemvalue="Spring Boot.SSOCenterApplication" />
+      <item itemvalue="Spring Boot.SsoClientApplication9001" />
+      <item itemvalue="Spring Boot.SsoClientApplication9002" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.SsoClientApplication9001" />
+        <item itemvalue="Spring Boot.SsoClientApplication9002" />
         <item itemvalue="Application.JwtHelper" />
       </list>
     </recent_temporary>
@@ -173,23 +151,22 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4cb5204d-9af2-47f1-8e3b-ca611bbd76dd" name="Changes" comment="" />
-      <created>1647004298361</created>
+      <changelist id="d8aca155-a9a5-4337-8cb3-1affe1c3ba18" name="Changes" comment="" />
+      <created>1662967191064</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1647004298361</updated>
-      <workItem from="1647004300339" duration="3877000" />
-      <workItem from="1647008206967" duration="8355000" />
-      <workItem from="1647066459140" duration="9000" />
-      <workItem from="1647070812294" duration="47000" />
-      <workItem from="1647525311444" duration="628000" />
-      <workItem from="1648111309547" duration="34000" />
-      <workItem from="1662280802966" duration="526000" />
-      <workItem from="1662281728243" duration="1757000" />
-      <workItem from="1662814440462" duration="20744000" />
-      <workItem from="1662899642337" duration="24000" />
-      <workItem from="1662899677869" duration="25000" />
+      <updated>1662967191064</updated>
+      <workItem from="1662967194654" duration="645000" />
+      <workItem from="1662967842458" duration="9510000" />
     </task>
+    <task id="LOCAL-00001" summary="redis manage jwt">
+      <created>1662981626711</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1662981626711</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +183,8 @@
       </map>
     </option>
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/sso_login$SsoCenterApplication.ic" NAME="SsoCenterApplication Coverage Results" MODIFIED="1662817577661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="redis manage jwt" />
+    <option name="LAST_COMMIT_MESSAGE" value="redis manage jwt" />
   </component>
 </project>

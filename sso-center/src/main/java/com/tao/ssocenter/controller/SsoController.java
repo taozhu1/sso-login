@@ -49,9 +49,9 @@ public class SsoController {
     private HashMap<String, Long> tokenExpireMap = new HashMap<>();
 
     /**
-     * 刷新时间：30min
+     * 刷新时间：token还剩5m过期时，如果还活跃就更新时间
      */
-    private long refreshTime = 30 * 60 * 1000L;
+    private long refreshTime = 5 * 60 * 1000L;
 
     /**
      * SSO登陆接口
@@ -87,7 +87,7 @@ public class SsoController {
 
         // redis管理过期时间
         String redisKey = RedisKeyUtil.getToken(String.valueOf(loginVo.getUserId()));
-        redisTemplate.opsForValue().set(redisKey, token, 2, TimeUnit.HOURS);
+        redisTemplate.opsForValue().set(redisKey, token, 30, TimeUnit.MINUTES);
         log.info("redis管理过期时间 key {} value", redisKey, token);
         return Result.ok(token);
     }
@@ -125,10 +125,10 @@ public class SsoController {
             tokenExpireMap.put(userId, expireDate);
         }
 
-        // 离TOKEN过期30min内被操作了，就续签token
+        // 离TOKEN过期5min内被操作了，就续签token
         long expireDate = tokenExpireMap.get(userId);
         if (expireDate - System.currentTimeMillis() <= refreshTime) {
-            redisTemplate.opsForValue().set(redisKey, token, 2, TimeUnit.MINUTES);
+            redisTemplate.opsForValue().set(redisKey, token, 30, TimeUnit.MINUTES);
             // 更新内存标记
             tokenExpireMap.remove(userId);
             tokenExpireMap.put(userId, redisTemplate.getExpire(redisKey));

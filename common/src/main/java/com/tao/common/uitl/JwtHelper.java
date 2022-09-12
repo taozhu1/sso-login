@@ -24,7 +24,8 @@ public class JwtHelper {
                 .claim("userId", userId)
                 .claim("userName", userName)
                 .claim("role", role)
-                .signWith(SignatureAlgorithm.HS512, jwtSignKey) // 使用用户密码作为sign，修改密码后签名失效
+                .claim("timestamp", System.currentTimeMillis())
+                .signWith(SignatureAlgorithm.HS512, jwtSignKey)
                 .compressWith(CompressionCodecs.GZIP);
 //                .setExpiration(new Date(jwtExpiration));
         return jwtBuilder.compact();
